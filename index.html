@@ -1,0 +1,67 @@
+<html>
+    <head> 
+        <link rel="stylesheet" href="main.css">'
+        <title>Javascript Tehtävät</title>
+    </head>
+    <script>
+        // Javascript kommentti näkyy vihreällä.
+        function tekstivaihto(){
+            document.getElementById("teksti").style.color = "red"
+        }
+        function otsikonvaihto(){
+            document.getElementById("otsikko").innerHTML = "Otsikko vaihtui"
+        }
+    </script>
+<body>
+    <h1 id="otsikko">Otsikko</h1>
+    <p id="teksti">Teksti</p>
+    <button type="button" onclick="tekstivaihto()">Tekstivaihtuu</button>
+    <button type="button" onclick="otsikonvaihto()">Otsikonvaihto</button>
+    <h1>Miten var,let ja const eroavat toisistaan?</h1>
+    <li>Var on suositeltavaa vain jos sivu toimii vanhoilla selaimilla.</li>
+    <li>Constilla saadaan jollekkin arvo jota ei sen jälkeen voi muuttaa</li>
+    <li> letiä käytetään jos yllä mainittuja asioita ei haluta.</li>
+    <p>-----------------------------------------------------------------------------------</p>
+    <input id="age"/>
+    <p id="clc"></p>
+    <button onclick="funktioikä()">Paina</button>
+    <p>-----------------------------------------------------------------------------------</p>
+    <p id="jeejee"></p>
+    <p>-----------------------------------------------------------------------------------</p>
+    <form>
+        <label>Etunimi</label>
+        <input type="text">
+         <label>Sukunimi</label>
+         <input type="text">
+         <input type="submit">
+        </form>
+        <p id=4esti></p>
+    <script>
+function funktioikä() {
+    let age = document.getElementById("age").value;
+    let voteable = (age < 18) ? "Alaikäinen":"Täysi-ikäinen";
+    document.getElementById("clc").innerHTML = voteable
+}
+let i = 0;
+let text = ""
+do {
+    text += "Huhuu?!" + i;
+    i++;
+}
+while (i < 5); 
+
+document.getElementById("4esti").innerHTML = text;
+const eläimet = [
+    "Koira" ,
+    "Kissa" ,
+    "hiiri" ,
+    "Marsu"
+];
+document.getElementById("jeejee").innerHTML = eläimet;
+
+for (let y = 0; y < 5; y++) {    
+    text += eläimet + "!"
+}
+    </script>
+</body>
+</html>
